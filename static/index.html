@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+
+
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        justify-content: center;
+        color: rgb(247, 240, 240);
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+    }
+
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #140303;
+        border-radius: 20px;
+    }
+
+    nav li {
+        float: left;
+    }
+
+    nav li a {
+        display: block;
+        color: #fdfbfb;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        text-shadow: 0 0 3em orange;
+    }
+
+    nav li a:hover {
+        background-color: orange transparent transparent transparent;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2)1fr;
+        row-gap: 0px;
+        column-gap: 0px;
+        grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section aside aside'
+
+            'footer footer footer footer';
+
+
+    }
+
+    #navbar {
+        grid-area: navbar;
+        background-color: black;
+        opacity: 0.8;
+        padding: 13px;
+        font-size: 20px;
+        text-align: center;
+
+
+
+
+    }
+
+    #navbar ul li {
+        list-style: none;
+        text-decoration: none;
+
+
+
+
+
+    }
+
+    ul li:hover {
+        background-color:black;
+        opacity: 0.2;
+        border-radius: 20px;
+
+
+    }
+
+    #aside {
+        grid-area: aside;
+        background-color: rgb(7, 7, 7);
+        padding: 10px 9px;
+        /* background-image: url(https://th.bing.com/th/id/R.6aea6cf116567655c4f1d70d295eafd3?rik=5bq3DBf1EixDzg&riu=http%3a%2f%2fwww.southtune.se%2fwp-content%2fuploads%2f2017%2f08%2fPurpleSpaceNoSun_JPG.jpg&ehk=1ubxWryAxYeqkNcVvKxQo%2fTKqYBgqNRMpMbGA3Nz8d4%3d&risl=&pid=ImgRaw&r=0); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    #aside::before {
+        content: '';
+        grid-area: section;
+        background-image: url();
+    }
+
+    .p {
+        margin: 3px;
+        padding: 6px;
+    }
+
+    #section {
+        background-color: black;
+        padding: 12px 10px;
+
+
+
+
+    }
+
+    #footer {
+        background-color:black;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        color: white;
+    }
+
+    .heading {
+        font-size: 80px;
+        /* width: 100px; */
+        margin: 50px;
+        text-align: center;
+        justify-content: center;
+        color: rgb(249, 243, 243);
+        font-weight: bold;
+        text-shadow: 4px 4px 5px rgb(254, 251, 250);
+        /* margin-left: 210px; */
+        font-family: 'Raleway', sans-serif;
+
+
+
+
+    }
+
+    .heading:hover {
+        color: orange;
+    }
+
+    input {
+        margin: 10px;
+        padding: 10px 10px;
+        border-radius: 9px;
+        /* box-shadow: 4px 4px 4px whitesmoke; */
+
+    }
+
+    label {
+        font-size: 20px;
+
+    }
+
+    .label-2 {
+        margin-left: 100px;
+        bottom: 1.2rem;
+    }
+
+    .box-2 {
+        padding: 20px;
+        /* text-shadow: 8px 8px 8px white; */
+        text-align: center;
+        color: black;
+
+    }
+
+    input[type=button] {
+        background-color: black;
+        color: aliceblue;
+        border-radius: 20px;
+        box-shadow: 0 0 2em orange;
+
+    }
+
+    input[type=button]:hover {
+        background-color: rgb(76, 41, 158);
+        color: black;
+        font-size: 20px;
+    }
+
+    @media only screen and (max-width:1301px) and (max-width:2000px) {
+        body {
+            background-color: black;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section aside aside '
+                'footer footer footer footer';
+
+            width: 100%;
+        }
+
+    }
+
+    @media only screen and (max-width:800px) and (max-width:1000px) {
+        body {
+            background-color: rgb(234, 13, 43);
+            grid-template-areas: 'navbar navbar navbar navbar'
+                'section section aside aside '
+                'footer footer footer footer';
+
+        }
+
+    }
+
+    @media only screen and (max-width:500px) and (max-width:800px) {
+        body {
+            background-color: rgb(221, 158, 9);
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section aside aside '
+                'footer footer footer footer';
+        }
+
+    }
+
+    .container-2 {
+        content: "";
+        /* background-image: url(https://th.bing.com/th/id/OIP.jGAG-oT5XDX6L2UU_pEPggHaDs?pid=ImgDet&rs=1); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: black;
+
+    }
+
+    .heading-2 {
+        text-align: center;
+        font-size: 100px;
+        color: white;
+        font-family: emoji;
+        /* margin-left: -142px; */
+        text-shadow: 3px 3px 3em orange;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .heading-2:hover {
+        color: orange;
+    }
+
+    .client {
+        height: 80px;
+        width: 80px;
+        padding: 13px;
+        /* border: 1px solid black; */
+        border-radius: 30px;
+        margin-top: 118px;
+    }
+
+    input {
+        color: black;
+        font-size: medium;
+    }
+
+
+
+
+    .client:hover {
+        /* transform: rotate(200deg); */                           
+        transition: all;                           
+        height: 90px;                           
+        width: 90px;                           
+        border-radius: 40px;                           
+        box-shadow: 5px 5px 5em orange;                           
+    }                           
+
+    .box>img {
+        height: 200x;                           
+        width: 200px;                           
+        border-radius: 20px;                           
+        margin-left: 160px;                           
+        margin-top: 57px;                           
+        opacity: 0.8;                           
+    }
+
+    .box>img:hover {
+        height: 150px;
+        width: 150px;
+
+        box-shadow: 1px 1px 4em orange;
+
+    }
+
+    .box {
+        margin-top: 27px;
+        text-shadow: 0 0  2em orange;
+        text-align: center;
+    }
+
+    section>a {
+        font: 2em sans-serif;
+
+    }
+
+    section>a:hover {
+        font-size: 3em;
+        color: orange;
+    }
+
+    /* Solor system */
+
+    aside {
+        margin: 0%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        overflow: hidden;
+    }
+
+
+    .container-1 {
+        font-size: 10px;
+        width: 40em;
+        height: 40em;
+        position: relative;
+        margin-left: 8em;
+
+    }
+
+    .sun {
+        position: absolute;
+        top: 15em;
+        left: 15em;
+        width: 10em;
+        height: 10em;
+        background-color: rgb(255, 166, 0);
+        border-radius: 50%;
+        box-shadow: 0 0 3em white;
+
+    }
+
+
+    .earth .moon {
+        position: absolute;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        border-width: 0.1em 0.1em 0 0;
+        border-radius: 50%;
+    }
+
+    .earth {
+        top: 5em;
+        left: 5em;
+        width: 30em;
+        height: 30em;
+        animation: orbit 70.1s linear infinite;
+
+
+    }
+
+    .moon {
+        top: 0%;
+        right: 0%;
+        width: 8em;
+        height: 8em;
+        animation: orbit 40.7s linear infinite;
+
+    }
+
+    .earth::before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    .moon::before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    .earth::before {
+        top: 2.8em;
+        right: 2.8em;
+        width: 3em;
+        height: 3em;
+        background-color: aqua;
+        box-shadow: 0 0 3em #ff4444;
+    }
+
+    .moon::before {
+        top: 0.8em;
+        right: 0.2em;
+        width: 1.2em;
+        height: 1.2em;
+        background-color: silver;
+        box-shadow: 0 0 3em white;
+    } 
+
+    @keyframes orbit {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+
+<body class="body">
+    <div class="container">
+        <div id="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+
+            </nav>
+
+        </div>
+        <div id="aside">
+            <div class="container-1">
+                <div class="sun">
+
+                </div>
+                <div class="earth">
+                    <div class="moon"></div>
+                </div>
+            </div>
+            <h1 class="heading">Welcome code world</h1>
+            <div class="box">
+                <img src="https://www.seoclerk.com/pics/000/748/061/bd1ddcf20243b5366e14524b6b79c773.png" alt="">
+                <!-- <img src="https://i.pinimg.com/736x/92/67/49/926749bf10e0ee59dc014009635c95ea.jpg" alt=""> -->
+                <img src="https://th.bing.com/th/id/OIP.0CkebSNUJMc1af5SjMceqAHaHa?pid=ImgDet&w=900&h=900&rs=1" alt="">
+            </div>
+            <div class="box">item2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perferendis aperiam
+                velit nam aspernatur quaerat, impedit sequi, nulla nemo excepturi maiores. Alias saepe consequuntur
+                provident sunt magni, cum non illum temporibus explicabo dolorem reprehenderit suscipit exercitationem
+                deleniti. Asperiores blanditiis adipisci saepe molestias placeat error architecto, non esse dolor
+                dolorem et sit commodi pariatur aliquam dolore beatae repudiandae, porro amet omnis, aliquid
+                repellendus. Odit, laboriosam alias praesentium ullam nemo doloribus laudantium ipsum reprehenderit
+                debitis earum aperiam omnis maxime quo consectetur, quibusdam sed corrupti delectus consequuntur? Eum,
+                minima? Iste et perferendis mollitia eius vero fugit ratione delectus dicta, modi nam voluptatum quasi.
+            </div>
+            <div class="box"></div>
+        </div>
+        <div id="section">
+            <h1 class="heading">Login</h1>
+            <div class="box-2">
+                <input type="Email" placeholder="Email">
+                <!-- <label for="Email">Email</label> -->
+                <br>
+                <input type="password" placeholder="Password">
+                <br>
+                <!-- <label for="Password" class="label-2">Password</label> -->
+                <br>
+                <input type="button" value="Submit">
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <section>
+        <div class="container-2">
+            <h1 class="heading-2">Our service</h1>
+            <section>
+
+                <a href="CV .pdf" download="CV .pdf">Download</a>
+            </section>
+ 
+
+            <div><img src="https://www.seoclerk.com/pics/000/748/061/bd1ddcf20243b5366e14524b6b79c773.png" alt=""
+                    class="client"></div>
+            <div><img src="https://i.pinimg.com/736x/92/67/49/926749bf10e0ee59dc014009635c95ea.jpg" alt=""
+                    class="client"></div>
+            <div><img
+                    src="https://yt3.ggpht.com/a/AATXAJzrwiw9ID5Mi7YIeBucKmzQ9p8e43-l4miLJeiayw=s900-c-k-c0xffffffff-no-rj-mo"
+                    alt="" class="client"></div>
+            <div><img
+                    src="https://yt3.ggpht.com/a/AATXAJyt9SsSsuqJ9xbDv1hTFktORiU7B0d1DNPvxw=s900-c-k-c0xffffffff-no-rj-mo"
+                    alt="" class="client"></div>
+            <div><img src="https://th.bing.com/th/id/OIP.0CkebSNUJMc1af5SjMceqAHaHa?pid=ImgDet&w=900&h=900&rs=1" alt=""
+                    class="client"></div>
+            <div>
+
+            </div>
+
+
+        </div>
+    </section>
+    <footer id="footer">@copyright 2023 Mandsaur. All rightsReserved </footer>
+</body>
+
+</html>
